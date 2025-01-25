@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   redir.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-pper <ana-pper@student.42.fr>          +#+  +:+       +#+        */
+/*   By: asaiz-lo <asaiz-lo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:19:48 by ana-pper          #+#    #+#             */
-/*   Updated: 2025/01/25 12:18:45 by ana-pper         ###   ########.fr       */
+/*   Updated: 2025/01/25 12:49:33 by asaiz-lo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ void	update_exit_status(pid_t pid)
 {
 	int	status;
 
+	signal(SIGINT, SIG_IGN);
 	waitpid(pid, &status, 0);
+	setup_signals();
 	if (WIFEXITED(status))
 	{
 		g_sig.exit_status = WEXITSTATUS(status);
