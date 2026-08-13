@@ -1,29 +1,29 @@
 ﻿# Minishell
 
-Unix shell in C with parser, pipes, redirections, and environment management.
+Shell Unix en C con parser, pipes, redirecciones y gestion de entorno.
 
 ## Stack
 
 - School: 42
-- Primary language: C/C++
-- Scope: single repository per project
+- Lenguaje principal: C (POSIX)
+- Alcance: un repositorio por proyecto
 
-## How To Run
+## Como Ejecutarlo
 
 ~~~bash
 make
 ./minishell
 ~~~
 
-## Testing
+## Pruebas
 
-No dedicated test script detected in the repository root.
+No se detectaron scripts de testing dedicados en la raiz.
 
-## Notes
+## Notas
 
-- This repository is maintained as part of a 42 portfolio.
-- Build commands are intentionally simple to keep evaluation reproducible.
+- Este repositorio forma parte del portfolio de 42.
+- Los comandos estan orientados a ejecucion local para revision y evaluacion.
 
-## Author
+## Autora
 
 anapaulapgavilan
